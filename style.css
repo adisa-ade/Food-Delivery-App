@@ -138,6 +138,29 @@ nav .toggle{
     color: var(--orange);
     border: 1px solid var(--orange);
 }
+
+.hero-img{
+    width: 100%;
+}
+.desktop-header-img{
+    width:100%;
+    margin-top: -40px;
+}
+.sub-hero{
+    margin: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#desktop-hr{
+    display: none;
+}
+.sub-hero h2{
+    font-size: 24px;
+    color: #000;
+    font-weight: 600;
+}
+
 @media screen and (min-width:760px) {
     nav{
         justify-content: space-between;
@@ -165,7 +188,7 @@ nav .toggle{
         background-image: url(Images/desktop-hero.png);
         background-repeat: no-repeat;
         background-size: cover;
-        padding: 50px 0;
+        padding: 30px 0 100px 0;
     }
     .hero p{
         color: var(--white);
@@ -181,5 +204,23 @@ nav .toggle{
     .hero-button{
         justify-content: center;
         flex-direction: row;
+        column-gap: 10px;
+    }
+    .hero button{
+        cursor: pointer;
+    }
+
+    .desktop-header-img{        
+        width: 548px;
+        margin-top: -70px;
+    }
+    #desktop-hr{
+        display: block;
+    }
+    #mobile-hr{
+        display:none;
+    }
+    .sub-hero h2{
+        font-size: 44px;
     }
 }
