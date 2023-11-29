@@ -160,7 +160,23 @@ nav .toggle{
     color: #000;
     font-weight: 600;
 }
-
+.info{
+    padding: 20px;
+    text-align: center;
+}
+.info p{
+    font-size: 24px;
+}
+.info-text  p:first-child{
+    color: var(--orange);
+}
+.info-text p:last-child{
+    color: var(--grey);
+}
+.info h2{
+    color: #000;
+    font-size: 40px;
+}
 @media screen and (min-width:760px) {
     nav{
         justify-content: space-between;
@@ -223,4 +239,26 @@ nav .toggle{
     .sub-hero h2{
         font-size: 44px;
     }
+    .info{
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        text-align: left;
+        row-gap: 20px;
+    }
+    .details{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: center;
+        column-gap: 90px;         
+        margin: 30px;       
+    }
+    .info-text{
+        width: 400px;
+    }
+    .explore{
+        flex-direction: row;
+    }
+
 }
