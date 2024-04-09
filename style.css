@@ -18,6 +18,7 @@ body{
 header{
     width: 100%;
     background-color: var(--white);   
+    position: fixed;
 }
 
 nav{        
@@ -45,7 +46,7 @@ nav .toggle{
     width: 100%;
     display: none;    
     height: 100vh;
-    animation: scale 0.7s ease-in;   
+    animation: scale 1s ease-in;   
 }
 @keyframes scale {
     from{
@@ -104,6 +105,9 @@ nav .toggle{
     color: var(--grey);
     font-weight: bold;
     font-size: 16px;
+}
+button:hover{
+    cursor:pointer;
 }
 .hero h2{
     color: var(--black);
@@ -177,6 +181,65 @@ nav .toggle{
     color: #000;
     font-size: 40px;
 }
+.footer{    
+    text-align: center;
+    color: var(--white);   
+    margin: 25px 0; 
+}
+.footer-top{
+    background-color: var(--black);
+    padding: 80px 20px;
+}
+.desktop-top{
+    display: none;
+}
+.footer-top h2{
+    font-size: 40px;
+    font-weight: bold;
+}
+.footer-top p{
+    color: var(--lightGrey);
+    font-size: 24px;
+    font-weight: 600;
+    padding: 0 20px;        
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 50px;
+}
+.buttons button{    
+    outline: none;    
+    border-radius: 10px;
+    color: var(--white);
+    padding: 0 10px;
+    font-weight: bold;
+}
+.buttons .buy{
+    padding: 18px 31px;
+    border: 0;
+    background-color: var(--orange);
+}
+.buttons .trial{
+    padding: 16px 45px;
+    border: 1px solid var(--white);
+    background-color: var(--black);
+    background-color: transparent;
+}
+.footer-bottom{
+    margin-top: 60px;
+}
+.footer-logo-img{
+    display: none;    
+}
+.copyright{
+    color: var(--lightGrey);
+    font-weight: bold;
+}
+
+
+/* TABLETS */
 @media screen and (min-width:760px) {
     nav{
         justify-content: space-between;
@@ -222,10 +285,6 @@ nav .toggle{
         flex-direction: row;
         column-gap: 10px;
     }
-    .hero button{
-        cursor: pointer;
-    }
-
     .desktop-header-img{        
         width: 548px;
         margin-top: -70px;
@@ -252,13 +311,46 @@ nav .toggle{
         align-items: center;
         justify-content: center;
         column-gap: 90px;         
-        margin: 30px;       
+        margin: 30px;               
     }
     .info-text{
-        width: 400px;
+        width: 400px;    
     }
     .explore{
         flex-direction: row;
     }
-
+    .footer-top{
+        padding: 120px 20px;
+        background-image: url('Images/Rectangle\ 47.png');
+        background-size: cover;
+        background-repeat: no-repeat;        
+    }
+    .mobile-top{
+        display: none;
+    }
+    .desktop-top{
+        display: block;
+    }
+        
+    .footer-top p{
+        color: var(--white);
+    }
+    .footer-icons{
+        display: flex;
+        justify-content: center;
+        column-gap: 20px;
+    }
+    .footer-icons img{
+        width: 50px;        
+    }
+}
+@media screen and (min-width:1024px) {
+    .footer-bottom{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .footer-logo-img{
+        display: block;
+    }    
 }
